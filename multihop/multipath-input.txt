@@ -1,0 +1,4 @@
+#format source, dest, packet-count
+1, 3, 20
+4, 2, 40
+1, 2, 60
