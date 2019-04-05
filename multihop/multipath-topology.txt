@@ -1,10 +1,11 @@
 #directional, n1->n2 is not the same as n2->n1
 # keyword: complete node-count or partial node-count
 # n1 n2, n3, n4
-partial 4
-1 2,4
-2 3,4
-3 1,4
-4 1,2,3
+complete 4
+#partial 4
+#1 2,4
+#2 3,4
+#3 1,4
+#4 1,2,3
 
 
