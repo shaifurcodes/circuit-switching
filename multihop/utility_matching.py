@@ -32,7 +32,13 @@ def get_one_hop_matching_score( switching_delay, bipartite_edge_weights, max_dur
     best_duration = None
     best_row_indx = None
     best_col_indx = None
-    duration_set = bipartite_edge_weights.flatten()
+    init_duration_set = bipartite_edge_weights.flatten()
+    duration_set = []
+    for i in init_duration_set:
+        if i >0.0 and ( i not in duration_set ):
+            duration_set.append(i)
+    #print "debug: @get_one_hop_(..): ", duration_set
+
     for duration in duration_set:  # TODO: make a binary search here
         if duration <= min_duration or duration > max_duration:  # ignore the duration <=0 or > remaining_duration
             continue
